@@ -1,4 +1,4 @@
-# Amresh Bhuyan - Portfolio Website
+# Abhilasha Mahatam - Portfolio Website
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
