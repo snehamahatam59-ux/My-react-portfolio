@@ -1,0 +1,37 @@
+{
+  "short_name": "Amresh",
+  "name": "Amresh Bhuyan | Founder & CEO – AediaX Tech",
+  "description": "Official personal website of Amresh Bhuyan, Tech Entrepreneur, Software Engineer, and Founder & CEO of AediaX Tech Private Limited.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#030b1e",
+  "background_color": "#030b1e",
+  "categories": [
+    "technology",
+    "business",
+    "education",
+    "portfolio"
+  ],
+  "lang": "en-IN"
+}

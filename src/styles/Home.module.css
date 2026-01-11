@@ -1,0 +1,115 @@
+/* MAIN HOME CONTAINER */
+#homeSection {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f1f5f9;
+  min-height: 80vh;
+}
+
+#homeWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+  align-items: center;
+}
+
+/* TEXT SECTION */
+#homeTextSection {
+  flex: 1;
+  min-width: 300px;
+}
+
+#greetingText {
+  color: #38bdf8;
+  font-weight: 500;
+}
+
+#nameText {
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+#roleText {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#highlightText {
+  color: #facc15;
+}
+
+#descriptionText {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #cbd5e1;
+}
+
+#moreButtonId {
+  background-color: #38bdf8;
+  color: #0f172a;
+  font-weight: 600;
+  padding: 10px 25px;
+  transition: all 0.3s;
+}
+
+#moreButtonId:hover {
+  background-color: #22d3ee;
+  color: #0f172a;
+}
+
+/* IMAGE SECTION */
+#homeImageSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 300px;
+}
+
+#imagePaper {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#profileImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+#profileImg:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  #homeWrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #homeTextSection {
+    order: 2;
+  }
+
+  #homeImageSection {
+    order: 1;
+  }
+
+  #imagePaper {
+    width: 200px;
+    height: 200px;
+  }
+}

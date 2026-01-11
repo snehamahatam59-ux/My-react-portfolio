@@ -1,0 +1,283 @@
+/* Navigation.module.css */
+
+/* Main Container */
+.appBar {
+  background: linear-gradient(90deg, #0f172a, #000001);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px !important;
+  min-height: 70px !important;
+}
+
+/* Logo Section */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoImage {
+  height: 45px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logoImage:hover {
+  transform: scale(1.05);
+}
+
+.logoText {
+  font-weight: 700 !important;
+  color: #f1f5f9 !important;
+  font-size: 1.3rem !important;
+  background: linear-gradient(to right, #38bdf8, #0ea5e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Desktop Navigation Links */
+.navLinks {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.navLink {
+  color: #f1f5f9 !important;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 8px 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #38bdf8, #0ea5e9);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: #38bdf8 !important;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* Mobile Menu Button */
+.menuButton {
+  display: none !important;
+  color: #38bdf8 !important;
+}
+
+.menuButton:hover {
+  background-color: rgba(56, 189, 248, 0.1) !important;
+}
+
+/* Drawer Container */
+.drawerContainer {
+  width: 280px;
+  height: 100%;
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawerLogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drawerLogoImage {
+  width: 45px;
+  height: 45px;
+}
+
+.drawerLogoText {
+  font-weight: 700 !important;
+  color: #f1f5f9 !important;
+  font-size: 1.3rem !important;
+  background: linear-gradient(to right, #38bdf8, #0ea5e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Drawer Navigation List */
+.drawerNavList {
+  flex: 1;
+}
+
+.drawerNavItem {
+  border-radius: 8px !important;
+  margin-bottom: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.drawerNavItem:hover {
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.1), rgba(14, 165, 233, 0.1)) !important;
+  transform: translateX(5px);
+}
+
+.drawerNavItem .MuiListItemText-primary {
+  color: #f1f5f9 !important;
+  font-weight: 500 !important;
+}
+
+.drawerNavItem:hover .MuiListItemText-primary {
+  color: #38bdf8 !important;
+}
+
+/* Active Link Styling */
+.activeLink {
+  color: #38bdf8 !important;
+  font-weight: 600 !important;
+}
+
+.activeLink::after {
+  width: 100% !important;
+}
+
+.drawerActive .MuiListItemText-primary {
+  color: #38bdf8 !important;
+  font-weight: 600 !important;
+}
+
+/* Responsive Media Queries */
+
+/* Tablet View (1024px and below) */
+@media (max-width: 1024px) {
+  .navLinks {
+    gap: 20px;
+  }
+  
+  .navLink {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet/Mobile View (900px and below) */
+@media (max-width: 900px) {
+  .navLinks {
+    display: none;
+  }
+  
+  .menuButton {
+    display: flex !important;
+  }
+  
+  .toolbar {
+    padding: 0 16px !important;
+    justify-content: space-between;
+  }
+  
+  .logoContainer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .logoText {
+    font-size: 1.1rem !important;
+  }
+  
+  .logoImage {
+    height: 40px;
+  }
+}
+
+/* Mobile View (768px and below) */
+@media (max-width: 768px) {
+  .toolbar {
+    min-height: 65px !important;
+  }
+  
+  .drawerContainer {
+    width: 260px;
+    padding: 20px;
+  }
+  
+  .drawerLogo {
+    margin-bottom: 24px;
+  }
+  
+  .drawerLogoImage {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .drawerLogoText {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* Small Mobile View (480px and below) */
+@media (max-width: 480px) {
+  .toolbar {
+    padding: 0 12px !important;
+    min-height: 60px !important;
+  }
+  
+  .logoText {
+    font-size: 1rem !important;
+  }
+  
+  .logoImage {
+    height: 35px;
+  }
+  
+  .drawerContainer {
+    width: 240px;
+    padding: 16px;
+  }
+  
+  .drawerLogo {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .drawerLogoImage {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .drawerLogoText {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Very Small Mobile View (360px and below) */
+@media (max-width: 360px) {
+  .logoText {
+    display: none;
+  }
+  
+  .drawerContainer {
+    width: 220px;
+  }
+}

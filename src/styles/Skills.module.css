@@ -1,0 +1,338 @@
+/* Skills.module.css */
+
+.container {
+  padding: 80px 20px;
+   background-color: #020617;
+  color: #fff;
+  text-align: center;
+}
+
+.title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  font-size: 3.2rem !important;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #ffffff;
+  margin: 25px auto 0 auto;
+}
+
+.subtitle {
+  color: #b0b0b0 !important;
+  margin-bottom: 60px !important;
+  font-size: 1.25rem !important;
+  max-width: 800px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  line-height: 1.6 !important;
+}
+
+.section {
+  margin-bottom: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionTitle {
+  font-weight: 600 !important;
+  margin-bottom: 30px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.8rem !important;
+}
+
+/* Technical Skills - Blue Theme */
+.section:nth-child(2) .sectionTitle {
+  color: #2196f3 !important;
+}
+
+/* Professional Skills - Green Theme */
+.section:nth-child(3) .sectionTitle {
+  color: #4caf50 !important;
+}
+
+/* Tools & Platforms - Purple Theme */
+.section:nth-child(4) .sectionTitle {
+  color: #9c27b0 !important;
+}
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skillItem {
+  text-align: left;
+}
+
+.skillNameIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.skillName {
+  font-weight: 500 !important;
+  font-size: 1.1rem !important;
+  color: #ffffff !important;
+}
+
+.skillIcon {
+  font-size: 20px !important;
+}
+
+/* Technical Skills Icons - Blue */
+.section:nth-child(2) .skillIcon {
+  color: #2196f3 !important;
+}
+
+/* Professional Skills Icons - Green */
+.section:nth-child(3) .skillIcon {
+  color: #4caf50 !important;
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 14px !important;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Technical Skills Progress Bars - Different colors for different skill levels */
+.section:nth-child(2) .progressBar .MuiLinearProgress-bar {
+  border-radius: 8px;
+  background: linear-gradient(90deg, #2196f3, #03a9f4) !important;
+}
+
+/* Professional Skills Progress Bars - Green theme */
+.section:nth-child(3) .progressBar .MuiLinearProgress-bar {
+  border-radius: 8px;
+  background: linear-gradient(90deg, #4caf50, #66bb6a) !important;
+}
+
+/* Individual skill colors for Technical Skills */
+/* Web Technologies - Blue-Purple */
+.section:nth-child(2) .skillItem:nth-child(1) .MuiLinearProgress-bar { background: linear-gradient(90deg, #ff5722, #ff7043) !important; } /* HTML - Orange */
+.section:nth-child(2) .skillItem:nth-child(2) .MuiLinearProgress-bar { background: linear-gradient(90deg, #2196f3, #64b5f6) !important; } /* CSS - Blue */
+.section:nth-child(2) .skillItem:nth-child(3) .MuiLinearProgress-bar { background: linear-gradient(90deg, #ffd600, #ffea00) !important; } /* JavaScript - Yellow */
+.section:nth-child(2) .skillItem:nth-child(4) .MuiLinearProgress-bar { background: linear-gradient(90deg, #007acc, #3b82f6) !important; } /* TypeScript - Deep Blue */
+.section:nth-child(2) .skillItem:nth-child(5) .MuiLinearProgress-bar { background: linear-gradient(90deg, #61dafb, #00d8ff) !important; } /* React - Cyan */
+.section:nth-child(2) .skillItem:nth-child(6) .MuiLinearProgress-bar { background: linear-gradient(90deg, #61dafb, #00d8ff) !important; } /* React Native - Cyan */
+
+/* Backend Skills - Green-Blue */
+.section:nth-child(2) .skillItem:nth-child(7) .MuiLinearProgress-bar { background: linear-gradient(90deg, #8bc34a, #cddc39) !important; } /* Node.js - Light Green */
+.section:nth-child(2) .skillItem:nth-child(8) .MuiLinearProgress-bar { background: linear-gradient(90deg, #8bc34a, #cddc39) !important; } /* Express.js - Light Green */
+.section:nth-child(2) .skillItem:nth-child(9) .MuiLinearProgress-bar { background: linear-gradient(90deg, #3776ab, #306998) !important; } /* Python - Python Blue */
+
+/* Database Skills - Orange-Red */
+.section:nth-child(2) .skillItem:nth-child(10) .MuiLinearProgress-bar { background: linear-gradient(90deg, #00758f, #00a0e4) !important; } /* MySQL - Blue */
+.section:nth-child(2) .skillItem:nth-child(11) .MuiLinearProgress-bar { background: linear-gradient(90deg, #47a248, #4db33d) !important; } /* MongoDB - Green */
+.section:nth-child(2) .skillItem:nth-child(12) .MuiLinearProgress-bar { background: linear-gradient(90deg, #ffca28, #ffa000) !important; } /* Firebase - Yellow-Orange */
+
+/* UI Frameworks - Pink-Purple */
+.section:nth-child(2) .skillItem:nth-child(13) .MuiLinearProgress-bar { background: linear-gradient(90deg, #7952b3, #6f42c1) !important; } /* Bootstrap - Purple */
+.section:nth-child(2) .skillItem:nth-child(14) .MuiLinearProgress-bar { background: linear-gradient(90deg, #007fff, #0059b2) !important; } /* Material UI - Blue */
+.section:nth-child(2) .skillItem:nth-child(15) .MuiLinearProgress-bar { background: linear-gradient(90deg, #000020, #4630eb) !important; } /* Expo - Deep Blue */
+.section:nth-child(2) .skillItem:nth-child(16) .MuiLinearProgress-bar { background: linear-gradient(90deg, #f05033, #dd4b39) !important; } /* Git/GitHub - Red-Orange */
+
+/* Professional Skills - Different shades of Green and Blue */
+.section:nth-child(3) .skillItem:nth-child(1) .MuiLinearProgress-bar { background: linear-gradient(90deg, #ff9800, #ffb74d) !important; } /* Creativity - Orange */
+.section:nth-child(3) .skillItem:nth-child(2) .MuiLinearProgress-bar { background: linear-gradient(90deg, #2196f3, #64b5f6) !important; } /* Problem Solving - Blue */
+.section:nth-child(3) .skillItem:nth-child(3) .MuiLinearProgress-bar { background: linear-gradient(90deg, #4caf50, #66bb6a) !important; } /* Teamwork - Green */
+.section:nth-child(3) .skillItem:nth-child(4) .MuiLinearProgress-bar { background: linear-gradient(90deg, #9c27b0, #ba68c8) !important; } /* Communication - Purple */
+.section:nth-child(3) .skillItem:nth-child(5) .MuiLinearProgress-bar { background: linear-gradient(90deg, #ff5722, #ff8a65) !important; } /* Time Management - Deep Orange */
+.section:nth-child(3) .skillItem:nth-child(6) .MuiLinearProgress-bar { background: linear-gradient(90deg, #607d8b, #78909c) !important; } /* Leadership - Blue Grey */
+.section:nth-child(3) .skillItem:nth-child(7) .MuiLinearProgress-bar { background: linear-gradient(90deg, #00bcd4, #26c6da) !important; } /* Adaptability - Cyan */
+
+.skillLevel {
+  min-width: 45px;
+  font-size: 14px !important;
+  text-align: right;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.toolChip {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  padding: 12px 20px !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.toolChip:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+.toolIcon {
+  color: #ffffff !important;
+}
+
+/* Different colors for tool chips */
+.toolChip:nth-child(1) { border-left: 4px solid #007acc; } /* VS Code - Blue */
+.toolChip:nth-child(2) { border-left: 4px solid #ff6c37; } /* Postman - Orange */
+.toolChip:nth-child(3) { border-left: 4px solid #f24e1e; } /* Figma - Orange */
+.toolChip:nth-child(4) { border-left: 4px solid #f05033; } /* Git - Red */
+.toolChip:nth-child(5) { border-left: 4px solid #026aa7; } /* Trello - Blue */
+.toolChip:nth-child(6) { border-left: 4px solid #fcc624; } /* Linux - Yellow */
+
+/* Responsive Media Queries */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 20px;
+  }
+  
+  .title {
+    font-size: 2.5rem !important;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem !important;
+    margin-bottom: 50px !important;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem !important;
+  }
+  
+  .skillName {
+    font-size: 1rem !important;
+  }
+  
+  .progressBar {
+    height: 12px !important;
+  }
+  
+  .skillLevel {
+    min-width: 40px;
+    font-size: 13px !important;
+  }
+  
+  .tools {
+    gap: 12px;
+  }
+  
+  .toolChip {
+    padding: 10px 16px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .container {
+    padding: 50px 16px;
+  }
+  
+  .title {
+    font-size: 2rem !important;
+  }
+  
+  .title::after {
+    width: 80px;
+    height: 3px;
+    margin-top: 20px;
+  }
+  
+  .subtitle {
+    font-size: 1rem !important;
+    margin-bottom: 40px !important;
+  }
+  
+  .section {
+    margin-bottom: 50px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.3rem !important;
+    margin-bottom: 25px !important;
+  }
+  
+  .skillsList {
+    gap: 18px;
+  }
+  
+  .skillNameIcon {
+    gap: 8px;
+  }
+  
+  .skillIcon {
+    font-size: 18px !important;
+  }
+  
+  .skillName {
+    font-size: 0.95rem !important;
+  }
+  
+  .progressContainer {
+    gap: 12px;
+  }
+  
+  .progressBar {
+    height: 10px !important;
+  }
+  
+  .skillLevel {
+    min-width: 35px;
+    font-size: 12px !important;
+  }
+  
+  .tools {
+    gap: 10px;
+  }
+  
+  .toolChip {
+    padding: 8px 14px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .title {
+    font-size: 1.8rem !important;
+  }
+  
+  .subtitle {
+    font-size: 0.95rem !important;
+  }
+  
+  .sectionTitle {
+    font-size: 1.2rem !important;
+  }
+  
+  .toolChip {
+    font-size: 0.85rem !important;
+    padding: 6px 12px !important;
+  }
+}

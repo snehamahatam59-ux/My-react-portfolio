@@ -1,0 +1,365 @@
+/* Services.module.css - Professional Dark Blue & White Theme */
+
+/* Main Container */
+.container {
+  padding: 100px 5%;
+   background-color: #020617;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Title */
+.title {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 3.2rem !important;
+  text-align: center;
+  margin-bottom: 20px !important;
+  letter-spacing: -0.5px;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #ffffff;
+  margin: 25px auto 0 auto;
+}
+
+/* Subtitle */
+.subtitle {
+  color: #b0b0b0 !important;
+  font-size: 1.25rem !important;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px auto !important;
+  line-height: 1.6 !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.3px;
+}
+
+/* Cards Container */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 35px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Card Base Styles */
+.card {
+  border-radius: 36px !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  transition: all 0.3s ease !important;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.card:hover {
+  transform: translateY(-10px) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Card Content */
+.card .MuiCardContent-root {
+  padding: 40px 35px 35px 35px !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Icon Container */
+.icon {
+  font-size: 50px !important;
+  margin-bottom: 30px !important;
+  width: 80px;
+  height: 80px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.card:hover .icon {
+  transform: scale(1.05);
+}
+
+/* Icon Colors - All White */
+.icon {
+  color: #ffffff !important;
+}
+
+/* Card Title */
+.cardTitle {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 1.5rem !important;
+  margin-bottom: 20px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.2px;
+}
+
+/* Card Text */
+.text {
+  color: #cccccc !important;
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
+  margin-bottom: 30px !important;
+  flex-grow: 1;
+  font-weight: 300 !important;
+}
+
+/* Tech Stack Section */
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color:aqua!important;
+}
+
+.tech .MuiChip-root {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  font-weight: 400 !important;
+  font-size: 0.9rem !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease;
+  padding: 4px 12px !important;
+  height: 32px !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tech .MuiChip-root:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Responsive Media Queries */
+
+/* Large Desktop */
+@media (min-width: 1600px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1200px) {
+  .container {
+    padding: 80px 5%;
+  }
+  
+  .title {
+    font-size: 2.8rem !important;
+  }
+  
+  .title::after {
+    margin-top: 20px;
+  }
+  
+  .subtitle {
+    font-size: 1.15rem !important;
+    max-width: 700px;
+    margin-bottom: 60px !important;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px) !important;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 900px) {
+  .container {
+    padding: 70px 5%;
+  }
+  
+  .title {
+    font-size: 2.5rem !important;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem !important;
+    margin-bottom: 50px !important;
+  }
+  
+  .cards {
+    gap: 25px;
+  }
+  
+  .card .MuiCardContent-root {
+    padding: 30px 25px 25px 25px !important;
+  }
+  
+  .icon {
+    font-size: 45px !important;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 25px !important;
+  }
+  
+  .cardTitle {
+    font-size: 1.3rem !important;
+  }
+  
+  .text {
+    font-size: 1rem !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 24px;
+  }
+  
+  .title {
+    font-size: 2.2rem !important;
+  }
+  
+  .title::after {
+    width: 80px;
+    height: 3px;
+  }
+  
+  .subtitle {
+    font-size: 1rem !important;
+    margin-bottom: 40px !important;
+    padding: 0;
+  }
+  
+  .cards {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px) !important;
+  }
+  
+  .icon {
+    font-size: 40px !important;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .container {
+    padding: 50px 20px;
+  }
+  
+  .title {
+    font-size: 2rem !important;
+  }
+  
+  .subtitle {
+    font-size: 0.95rem !important;
+    margin-bottom: 35px !important;
+  }
+  
+  .card .MuiCardContent-root {
+    padding: 25px 20px 20px 20px !important;
+  }
+  
+  .icon {
+    font-size: 35px !important;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 20px !important;
+  }
+  
+  .cardTitle {
+    font-size: 1.2rem !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .text {
+    font-size: 0.95rem !important;
+    margin-bottom: 25px !important;
+  }
+  
+  .tech {
+    gap: 8px;
+    padding-top: 15px;
+    margin-top: 15px;
+  }
+  
+  .tech .MuiChip-root {
+    font-size: 0.85rem !important;
+    padding: 3px 10px !important;
+    height: 28px !important;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .container {
+    padding: 40px 16px;
+  }
+  
+  .title {
+    font-size: 1.8rem !important;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem !important;
+  }
+  
+  .cards {
+    gap: 20px;
+  }
+  
+  .icon {
+    font-size: 32px !important;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .tech {
+    gap: 6px;
+  }
+  
+  .tech .MuiChip-root {
+    font-size: 0.8rem !important;
+  }
+}

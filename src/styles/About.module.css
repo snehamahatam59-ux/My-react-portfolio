@@ -1,0 +1,201 @@
+/* About.module.css - Creative & Responsive Design */
+
+/* Main Container */
+.aboutContainer {
+  padding: 100px 5%;
+  background: linear-gradient(180deg, rgb(1, 1, 36) 0%, rgb(2, 6, 23) 100%);
+  color: #baf3ff !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative Lines */
+.aboutContainer::before,
+.aboutContainer::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+}
+.aboutContainer::before { top: 0; }
+.aboutContainer::after { bottom: 0; }
+
+/* Title */
+.title {
+  font-weight: 800 !important;
+  font-size: 3.5rem !important;
+  text-align: center;
+  margin-bottom: 20px !important;
+  animation: fadeIn 0.8s ease forwards;
+  color: #ffffff !important;
+}
+
+.title::after {
+  content: '';
+  width: 150px;
+  height: 4px;
+  display: block;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* Subtitle */
+.subtitle {
+  color: #b0b0b0 !important;
+  font-size: 1.5rem !important;
+  text-align: center;
+  margin-bottom: 50px !important;
+  opacity: 0;
+  animation: fadeIn 0.8s ease 0.2s forwards;
+}
+
+/* Bio */
+.bio {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  font-size: 1.2rem !important;
+  text-align: center;
+  color: #e0e0e0 !important;
+  line-height: 1.8;
+  opacity: 0;
+  animation: fadeIn 0.8s ease 0.4s forwards;
+}
+
+/* ========================= */
+/* CARD CONTAINER (UPDATED) */
+/* ========================= */
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 900px;
+  margin: 60px auto 0;
+}
+
+/* Card */
+.card {
+  background: linear-gradient(145deg, rgba(3,11,30,0.9), rgba(1,1,36,0.95)) !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+  animation: floatUp 6s ease-in-out infinite;
+  width: 100%;
+  
+  color: #5d8de6 !important;
+}
+
+/* Top Glow Line */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  
+}
+
+/* Variants */
+.professionalRoleCard::before {
+  background: linear-gradient(90deg, #93cbff, #5081ff);
+}
+.academicCard::before {
+  background: linear-gradient(90deg, #9c27b0, #e91e63);
+}
+.familyCard::before {
+  background: linear-gradient(90deg, #4caf50, #8bc34a);
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  animation-play-state: paused;
+}
+
+/* Card Content */
+.card .MuiCardContent-root {
+  padding: 40px 35px !important;
+}
+
+/* Card Title */
+.cardTitle {
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 20px;
+}
+
+.academicCard .cardTitle {
+  background: linear-gradient(90deg, #9c27b0, #e91e63);
+}
+
+.familyCard .cardTitle {
+  background: linear-gradient(90deg, #4caf50, #8bc34a);
+}
+
+/* Card Text */
+.cardText {
+  color: #cccccc !important;
+  font-size: 1.1rem !important;
+  line-height: 1.7;
+}
+
+/* Links */
+.links {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.links .MuiLink-root {
+  color: #93cbff !important;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.links .MuiLink-root::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #93cbff, #5081ff);
+  left: 0;
+  bottom: -2px;
+  transition: width 0.3s;
+}
+
+.links .MuiLink-root:hover::after {
+  width: 100%;
+}
+
+/* Animations */
+@keyframes floatUp {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title { font-size: 2.3rem !important; }
+  .subtitle { font-size: 1.1rem !important; }
+  .bio { font-size: 1rem !important; text-align: left; }
+  .card .MuiCardContent-root { padding: 30px 25px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

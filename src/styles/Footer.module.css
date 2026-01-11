@@ -1,0 +1,115 @@
+/* MAIN FOOTER */
+.footer {
+  background: linear-gradient(90deg, #121c32, #000000);
+  color: #cbd5f5;
+  padding: 40px 20px 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* TOP SECTION */
+.topFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 25px auto;
+  gap: 25px;
+}
+
+/* NAV LINKS */
+.navLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
+}
+
+.navLink {
+  color: #94a3b8;
+  text-decoration: none !important;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #38bdf8;
+}
+
+/* SOCIAL ICONS */
+.socialLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.socialLink {
+  color: #eef5ff!important;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialLink:hover {
+  color: #38bdf8;
+  transform: translateY(-3px);
+}
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  width: 90%;
+  max-width: 900px;
+  margin: 18px auto;
+  background: #334155;
+}
+
+/* COPYRIGHT TEXT */
+.text {
+  text-align: center;
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* TABLET */
+@media (max-width: 900px) {
+  .topFooter {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navLinks {
+    justify-content: center;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 15px 15px;
+  }
+
+  .navLink {
+    font-size: 14px;
+  }
+
+  .socialLink {
+    font-size: 24px;
+  }
+
+  .text {
+    font-size: 13px;
+  }
+}
